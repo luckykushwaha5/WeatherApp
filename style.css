@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#3a3a64, #1a1a3a);
+}
+
+.app-container {
+    background-image: linear-gradient(
+        to bottom right,
+        rgb(11, 232, 191),
+        rgba(77, 53, 173, 0.77)
+    );
+    padding: 25px;
+    width: 25vw;
+    min-width: 320px;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+    box-shadow: 10px 15px 30px 2px rgba(0, 0, 0, 0.579);
+}
+
+.top {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-text {
+    flex: 1;
+    padding-left: 20px;
+    height: 8vh;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.3rem;
+    outline: none;
+}
+
+.search-btn {
+    height: 8vh;
+    width: 8vh;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.search-btn:hover {
+    background-color: #e0e0e0;
+}
+.search-btn img {
+    height: 22px;
+}
+
+.weather {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+}
+.weather img {
+    height: 125px;
+}
+
+.temp p {
+    color: white;
+    margin-top: 3vh;
+    font-size: 4.2rem;
+    text-align: center;
+}
+.city p {
+    color: white;
+    margin-top: 3vh;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.bottom {
+    margin-top: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left,
+.right {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    gap: 10px;
+}
+.left img,
+.right img {
+    height: 40px;
+}
+.leftData span,
+.rightData span {
+    display: block;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* ============== Responsive Design ============== */
+
+
+@media screen and (max-width: 1024px) {
+    .app-container {
+        width: 50vw;
+    }
+    .input-text {
+        font-size: 1.2rem;
+    }
+    .temp p {
+        font-size: 3.5rem;
+    }
+    .city p {
+        font-size: 2rem;
+    }
+    .weather img {
+        height: 100px;
+    }
+    .left img, .right img {
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .app-container {
+        width: 70vw;
+    }
+    .top {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .input-text {
+        width: 100%;
+        height: 6vh;
+        font-size: 1.1rem;
+    }
+    .search-btn {
+        height: 6vh;
+        width: 6vh;
+    }
+    .temp p {
+        font-size: 3rem;
+    }
+    .city p {
+        font-size: 1.8rem;
+    }
+    .weather img {
+        height: 90px;
+    }
+    .bottom {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .app-container {
+        width: 90vw;
+        padding: 15px;
+    }
+    .temp p {
+        font-size: 2.5rem;
+    }
+    .city p {
+        font-size: 1.5rem;
+    }
+    .weather img {
+        height: 80px;
+    }
+    .bottom {
+        flex-direction: column;
+    }
+    .left,
+    .right {
+        font-size: 1.1rem;
+    }
+    .left img,
+    .right img {
+        height: 30px;
+    }
+}
